@@ -16,5 +16,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/editText7" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText8"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="10"
+            android:id="@+id/editText9" />
     </LinearLayout>
 </LinearLayout>
