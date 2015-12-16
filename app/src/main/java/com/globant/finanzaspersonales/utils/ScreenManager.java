@@ -1,4 +1,4 @@
-package com.globant.finanazaspersonales.utils;
+package com.globant.finanzaspersonales.utils;
 
 import android.os.Bundle;
 import android.os.Parcelable;

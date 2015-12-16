@@ -1,4 +1,4 @@
-package com.globant.finanazaspersonales.utils;
+package com.globant.finanzaspersonales.utils;
 
 /**
  * Created by armando.dominguez on 15/12/2015.

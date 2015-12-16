@@ -1,4 +1,4 @@
-package com.globant.finanazaspersonales.activities;
+package com.globant.finanzaspersonales.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

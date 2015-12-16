@@ -1,4 +1,4 @@
-package com.globant.finanazaspersonales.activities;
+package com.globant.finanzaspersonales.activities;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;

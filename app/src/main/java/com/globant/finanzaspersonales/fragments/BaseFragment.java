@@ -1,4 +1,4 @@
-package com.globant.finanazaspersonales.fragments;
+package com.globant.finanzaspersonales.fragments;
 
 /**
  * Created by armando.dominguez on 15/12/2015.
