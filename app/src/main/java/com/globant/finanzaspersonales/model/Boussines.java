@@ -52,7 +52,7 @@ public class Boussines<T> extends ConnectionFactory {
     public List<T> getAllData(Class<T> a) throws Exception{
         return daoSession.loadAll(a);
     }
-    
+
     public boolean isConfigured() throws Exception{
         userDao muserDao = daoSession.getUserDao();
         List<user> mList = muserDao.loadAll();
