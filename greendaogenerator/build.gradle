@@ -1,7 +1,7 @@
 apply plugin: 'application'
 apply plugin: 'java'
 
-mainClassName="com.example.GreenDatoGenerator"
+mainClassName="com.example.GreenDaoGenerator"
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
