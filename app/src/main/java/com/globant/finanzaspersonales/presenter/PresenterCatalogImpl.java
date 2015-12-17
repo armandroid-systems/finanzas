@@ -31,10 +31,12 @@ public class PresenterCatalogImpl implements PresenterCatalog, ProcessCallback{
     @Override
     public void success(Object param) {
         Log.d(TAG,"DONE...");
+        viewCallback.navigate(param);
     }
 
     @Override
     public void error(String message) {
         Log.d(TAG,"NOT DONE...");
+        viewCallback.showMessage();
     }
 }

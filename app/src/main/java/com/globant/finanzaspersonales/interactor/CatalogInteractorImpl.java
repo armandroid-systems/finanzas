@@ -19,7 +19,7 @@ public class CatalogInteractorImpl implements CatalogInteractor {
                 processCallback.success(null);
             }else{
                 Log.d(TAG,"NO USER...");
-                processCallback.error("LALALALA");
+                processCallback.success(null);
             }
         }catch(Exception e){
             Log.d(TAG,"WTF error...");

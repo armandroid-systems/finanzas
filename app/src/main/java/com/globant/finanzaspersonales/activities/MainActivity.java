@@ -1,31 +1,32 @@
 package com.globant.finanzaspersonales.activities;
 
+
 import android.os.Bundle;
-import android.util.Log;
 
 import com.globant.finanazaspersonales.R;
-import com.globant.finanzaspersonales.fragments.FragmentSingin;
+import com.globant.finanzaspersonales.fragments.FragmentConfiguration;
 import com.globant.finanzaspersonales.utils.Constants;
 import com.globant.finanzaspersonales.utils.ScreenManager;
 
-public class LoginActivity extends BaseActivity {
-    private final static String TAG = LoginActivity.class.getSimpleName();
+public class MainActivity extends BaseActivity {
+    private final static String TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_main);
 
-        if(findViewById(R.id.authScreenWrapper)!= null){
+        if(findViewById(R.id.mainActivityWrapper) != null){
             if(savedInstanceState == null){
                 try {
-                    ScreenManager.screenChange(LoginActivity.this,R.id.authScreenWrapper,FragmentSingin.class,null,Constants.VIEW_SINGIN,Constants.BIN_TRUE);
+                    ScreenManager.screenChange(MainActivity.this,R.id.mainActivityWrapper, FragmentConfiguration.class,null, Constants.VIEW_CONFIGURATION,Constants.BIN_TRUE);
                 } catch (IllegalAccessException e) {
-                    Log.e(TAG,"ERROR "+e);
+                    e.printStackTrace();
                 } catch (InstantiationException e) {
-                    Log.e(TAG, "ERROR " + e);
+                    e.printStackTrace();
                 }
             }
         }
     }
+
 }

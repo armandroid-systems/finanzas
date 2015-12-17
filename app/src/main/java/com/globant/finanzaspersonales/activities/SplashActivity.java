@@ -1,5 +1,6 @@
 package com.globant.finanzaspersonales.activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -28,5 +29,7 @@ public class SplashActivity extends AppCompatActivity implements ViewCallback {
     @Override
     public void navigate(Object param) {
         Log.d("ACTIVITY","NAVIGATE....");
+        startActivity(new Intent(SplashActivity.this,LoginActivity.class));
+        finish();
     }
 }
