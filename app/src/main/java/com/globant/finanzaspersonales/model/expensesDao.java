@@ -189,9 +189,9 @@ public class expensesDao extends AbstractDao<expenses, Long> {
             StringBuilder builder = new StringBuilder("SELECT ");
             SqlUtils.appendColumns(builder, "T", getAllColumns());
             builder.append(',');
-            SqlUtils.appendColumns(builder, "T0", daoSession.getcat_categoryDao().getAllColumns());
+            SqlUtils.appendColumns(builder, "T0", daoSession.getCat_categoryDao().getAllColumns());
             builder.append(',');
-            SqlUtils.appendColumns(builder, "T1", daoSession.getcat_tdcDao().getAllColumns());
+            SqlUtils.appendColumns(builder, "T1", daoSession.getCat_tdcDao().getAllColumns());
             builder.append(" FROM EXPENSES T");
             builder.append(" LEFT JOIN CAT_CATEGORY T0 ON T.\"ID_CATEGORY\"=T0.\"idCategory\"");
             builder.append(" LEFT JOIN CAT_TDC T1 ON T.\"ID_TDC\"=T1.\"idTdc\"");
@@ -205,11 +205,11 @@ public class expensesDao extends AbstractDao<expenses, Long> {
         expenses entity = loadCurrent(cursor, 0, lock);
         int offset = getAllColumns().length;
 
-        cat_category cat_category = loadCurrentOther(daoSession.getcat_categoryDao(), cursor, offset);
+        cat_category cat_category = loadCurrentOther(daoSession.getCat_categoryDao(), cursor, offset);
         entity.setCat_category(cat_category);
-        offset += daoSession.getcat_categoryDao().getAllColumns().length;
+        offset += daoSession.getCat_categoryDao().getAllColumns().length;
 
-        cat_tdc cat_tdc = loadCurrentOther(daoSession.getcat_tdcDao(), cursor, offset);
+        cat_tdc cat_tdc = loadCurrentOther(daoSession.getCat_tdcDao(), cursor, offset);
         entity.setCat_tdc(cat_tdc);
 
         return entity;    
