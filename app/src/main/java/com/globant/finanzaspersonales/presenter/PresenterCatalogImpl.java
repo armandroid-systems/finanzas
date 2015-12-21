@@ -28,6 +28,12 @@ public class PresenterCatalogImpl implements PresenterCatalog, ProcessCallback{
         interactor.checkUser(context,this);
     }
 
+
+    @Override
+    public void checkBudgets() {
+        interactor.checkBudget(context,this);
+    }
+
     @Override
     public void success(Object param) {
         Log.d(TAG,"DONE...");
@@ -39,4 +45,5 @@ public class PresenterCatalogImpl implements PresenterCatalog, ProcessCallback{
         Log.d(TAG,"NOT DONE...");
         viewCallback.showMessage();
     }
+
 }

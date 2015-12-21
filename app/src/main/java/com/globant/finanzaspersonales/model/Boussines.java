@@ -6,6 +6,8 @@ import android.util.Log;
 
 import java.util.List;
 
+import de.greenrobot.dao.query.QueryBuilder;
+
 /**
  * Created by armando.dominguez on 16/12/2015.
  */
@@ -21,6 +23,8 @@ public class Boussines<T> extends ConnectionFactory {
 
     public Boussines(Context context) {
         super(context);
+        QueryBuilder.LOG_SQL = true;
+        QueryBuilder.LOG_VALUES = true;
         daoSession = daoMaster.newSession();
     }
 
@@ -90,6 +94,8 @@ public class Boussines<T> extends ConnectionFactory {
                 mBalance.expenses = c.getFloat(0);
                 mBalance.balance = c.getFloat(1);
             } while (c.moveToNext());
+        }else{
+            mBalance = null;
         }
         c.close();
         return mBalance;

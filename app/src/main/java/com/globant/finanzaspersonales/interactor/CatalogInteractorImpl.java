@@ -27,4 +27,13 @@ public class CatalogInteractorImpl implements CatalogInteractor {
         }
 
     }
+
+    @Override
+    public void checkBudget(Context ctx, ProcessCallback param) {
+        try{
+            param.success(new Boussines(ctx).getCurrentBalance());
+        }catch(Exception e){
+            param.error(e.getMessage());
+        }
+    }
 }

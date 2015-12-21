@@ -10,4 +10,5 @@ import com.globant.finanzaspersonales.interfaces.ProcessCallback;
 public interface CatalogInteractor {
 
     void checkUser(Context ctx, ProcessCallback param);
+    void checkBudget(Context ctx, ProcessCallback param);
 }

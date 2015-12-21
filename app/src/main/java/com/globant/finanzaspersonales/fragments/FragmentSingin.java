@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.globant.finanazaspersonales.R;
 import com.globant.finanzaspersonales.activities.MainActivity;
+import com.globant.finanzaspersonales.utils.Constants;
 
 import org.w3c.dom.Text;
 
@@ -36,7 +37,7 @@ public class FragmentSingin extends BaseFragment implements View.OnClickListener
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.skipAuth:
-                startActivity(new Intent(getActivity(), MainActivity.class));
+                startActivity(new Intent(getActivity(), MainActivity.class).putExtra("something", Constants.BIN_FALSE));
                 getActivity().finish();
                 break;
             case R.id.singInButton:

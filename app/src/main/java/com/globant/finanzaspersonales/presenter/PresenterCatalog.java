@@ -5,4 +5,5 @@ package com.globant.finanzaspersonales.presenter;
  */
 public interface PresenterCatalog {
     void checkForUsers();
+    void checkBudgets();
 }
