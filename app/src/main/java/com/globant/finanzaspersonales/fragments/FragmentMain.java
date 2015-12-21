@@ -11,7 +11,7 @@ import com.globant.finanazaspersonales.R;
 /**
  * Created by armando.dominguez on 17/12/2015.
  */
-public class FragmentConfiguration extends BaseFragment {
+public class FragmentMain extends BaseFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
