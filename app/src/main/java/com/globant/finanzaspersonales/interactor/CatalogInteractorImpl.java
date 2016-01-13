@@ -5,6 +5,7 @@ import android.util.Log;
 
 import com.globant.finanzaspersonales.interfaces.ProcessCallback;
 import com.globant.finanzaspersonales.model.Boussines;
+import com.globant.finanzaspersonales.model.user;
 
 /**
  * Created by armando.dominguez on 16/12/2015.
@@ -15,12 +16,8 @@ public class CatalogInteractorImpl implements CatalogInteractor {
     @Override
     public void checkUser(Context ctx, ProcessCallback processCallback) {
         try{
-            if(new Boussines(ctx).isConfigured()){
-                processCallback.success(null);
-            }else{
-                Log.d(TAG,"NO USER...");
-                processCallback.success(null);
-            }
+            Log.d(TAG,"SENDING USER OBJECT");
+            processCallback.success(new Boussines(ctx).isConfigured());
         }catch(Exception e){
             Log.d(TAG,"WTF error...");
             processCallback.error(e.getMessage());

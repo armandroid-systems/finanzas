@@ -6,4 +6,32 @@
     <string name="button_history">Consultar historico</string>
     <string name="button_calculator">Calculadora</string>
     <string name="button_credit">Mis creditos</string>
+
+    <!--CATEGORIES ARRAY-->
+    <array name="categories">
+        <item>Transporte</item>
+        <item>Despensa</item>
+        <item>Entretenimiento</item>
+        <item>Gasolina</item>
+        <item>Medico</item>
+        <item>Medicina</item>
+        <item>Comida fuera</item>
+        <item>Golosinas</item>
+    </array>
+    <!--TDC EMISOR-->
+    <array name="bank">
+        <item>BBVA-Bancomer</item>
+        <item>Banamex</item>
+        <item>HSBC</item>
+        <item>Santander</item>
+        <item>Banorte-IXE</item>
+        <item>Inbursa</item>
+        <item>Scotia</item>
+        <item>Walmart</item>
+        <item>Coppel</item>
+        <item>Suburbia</item>
+        <item>Sears</item>
+        <item>Liverpool</item>
+        <item>Otro</item>
+    </array>
 </resources>

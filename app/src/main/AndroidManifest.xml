@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.globant.finanzaspersonales.activities.LoginActivity" />
-        <activity android:name="com.globant.finanzaspersonales.activities.MainActivity"></activity>
+        <activity android:name="com.globant.finanzaspersonales.activities.MainActivity" />
     </application>
 
 </manifest>

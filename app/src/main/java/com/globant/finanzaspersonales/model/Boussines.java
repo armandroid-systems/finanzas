@@ -16,9 +16,9 @@ public class Boussines<T> extends ConnectionFactory {
 
     private DaoSession daoSession;
 
-    private static final String BALANCE_QUERY = "SELECT SUM(T1.monto) AS EXPENSE, (T2.ingreso - SUM(T1.monto)) AS BALANCE FROM expenses AS T1" +
-            "INNER JOIN budgets AS T3 ON T1.id_presupuesto = T3.idcatpresupuestos" +
-            "INNER JOIN user AS T2 ON T2.idUsuario = T3.idUsuario" +
+    private static final String BALANCE_QUERY = "SELECT SUM(T1.monto) AS EXPENSE, (T2.ingreso - SUM(T1.monto)) AS BALANCE FROM expenses AS T1 " +
+            "INNER JOIN budgets AS T3 ON T1.idBudget = T3.idBudget " +
+            "INNER JOIN user AS T2 ON T2.idUser = T3.idUser " +
             "WHERE T1.id_presupuesto = 1;";
 
     public Boussines(Context context) {
@@ -63,14 +63,15 @@ public class Boussines<T> extends ConnectionFactory {
         return daoSession.loadAll(a);
     }
 
-    public boolean isConfigured() throws Exception{
+    public user isConfigured() throws Exception{
         userDao muserDao = daoSession.getUserDao();
         List<user> mList = muserDao.loadAll();
         if(mList.isEmpty()){
-            return false;
+            return null;
         }else{
-            return true;
+            return mList.get(0);
         }
+
     }
 
     public List<user> getProfile(int idUser) throws Exception{
